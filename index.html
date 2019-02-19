@@ -20,9 +20,7 @@
             inactive-color="#ff4949">
     </el-switch>
 
-    <el-time-picker v-model="value3" :picker-options="{
-      selectableRange: '18:30:00 - 20:30:00'
-    }"
+    <el-time-picker v-model="value3" value-format="HH:mm" :picker-options="{format:'HH:mm'}"
             placeholder="任意时间点">
     </el-time-picker></div>
 
@@ -35,7 +33,7 @@
         el: '#app',
         data: function() {
             return { input: "test",num1:1 ,value2:true,
-                value3: new Date(2016, 9, 10, 18, 40)
+                value3:null
             }
         }
     })
